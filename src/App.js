@@ -14,11 +14,17 @@ const SubHeader = ({subheader}) => {
 }
 
 const Description = ({description}) => {
-  return <h3 >{description}</h3>
+  return (<div>
+    <h3 className="description">{description.product}-${description.price} x {description.amount}</h3>
+  </div>);
 }
 
 const ItalicDesc = ({italicdesc}) => {
   return <h3 className="italic">{italicdesc}</h3>
+}
+
+const Totaldesc = ({totaldesc}) => {
+  return <h3>{totaldesc}</h3>
 }
 
 const Button = ({buttonstr}) => {
@@ -30,17 +36,19 @@ function App() {
     <div className="App">
       <Header />
       <hr></hr>
+
       <SubHeader subheader = "Products"/>
-      <Description description="iPad 4 Mini - $500.01 x 2"/>
+      <Description description = {{product:"iPad 4 Mini", price:"500.01", amount:2}}/>
       <Button buttonstr="Add to Cart"/>
-      <Description description="H&M T-Shirt White - $10.99 x 10"/>
+      <Description description = {{product:"H&M T-Shirt White", price:"10.99", amount:10}}/>
       <Button buttonstr="Add to Cart"/>
-      <Description description="Charli XCX - Sucker CD - $19.99 x 5"/>
+      <Description description = {{product:"Charli XCX - Sucker", price:"19.99", amount:5}}/>
       <Button buttonstr="Add to Cart"/>
       <hr></hr>
+
       <SubHeader subheader = "Your Cart"/>
       <ItalicDesc italicdesc="Please add some products to cart."/>
-      <Description description="Total: $0.00"/>
+      <Totaldesc totaldesc="Total: $0.00"/>
       <Button buttonstr="Checkout"/>
     </div>
   );
