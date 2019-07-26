@@ -6,7 +6,7 @@ class Productitem extends Component{
         return(
             <div>
                 <h4>{product} - ${price} * {num}</h4>
-                <button type="button">Add to cart</button>
+                <button type="button" onClick={this.props.clickEvent}>Add to cart</button>
             </div>
         );
     }
