@@ -11,7 +11,11 @@ class Cart extends Component{
                 <h2>Your Cart</h2>
                 <h4 style = {{fontStyle:'italic'}}>Please add some products to cart</h4>
                 <h4>Total: ${this.props.total}</h4>
-                <button onClick={this.props.init}>Checkout</button>
+                {
+                    this.props.total === 0 ? <button disabled>Checkout</button> : <button onClick={this.props.init}>Checkout</button>
+                }
+                <br></br>
+                <br></br>
             </div>
         );
     }

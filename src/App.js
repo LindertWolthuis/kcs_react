@@ -13,9 +13,9 @@ class App extends Component{
     this.state = {
       total : 0.00, 
       data: [
-        {id: 0, product: "iPad 4 Mini", price: 100, num: 2},
-        {id: 1, product: "H & M T-Shirt White", price: 10, num: 5},
-        {id: 2, product: "Charil XCX - Sucker CD", price: 5, num: 3}
+        {id: 0, product: "iPad", price: 100, num: 2},
+        {id: 1, product: "T-Shirt", price: 10, num: 5},
+        {id: 2, product: "Sucker CD", price: 5, num: 3}
       ]
     };
   }
@@ -24,9 +24,9 @@ class App extends Component{
     this.setState({
       total: 0.00,
       data: [
-        {id: 0, product: "iPad 4 Mini", price: 100, num: 2},
-        {id: 1, product: "H & M T-Shirt White", price: 10, num: 5},
-        {id: 2, product: "Charil XCX - Sucker CD", price: 5, num: 3}
+        {id: 0, product: "iPad", price: 100, num: 2},
+        {id: 1, product: "T-Shirt", price: 10, num: 5},
+        {id: 2, product: "Sucker CD", price: 5, num: 3}
       ]
     });
   }
